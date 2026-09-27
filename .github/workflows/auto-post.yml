@@ -1,0 +1,52 @@
+name: Auto Post News
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'   # tiap 2 jam sekali run
+  workflow_dispatch: {}       # supaya bisa dijalankan manual dari tab Actions
+
+permissions:
+  contents: write             # supaya bisa commit balik posted-log.json
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'         # mempercepat proses & menghemat kuota menit
+                                # (butuh package-lock.json ikut ada di repo)
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Jalankan skrip auto-post
+        run: node auto-post-news.js
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          WP_URL: ${{ secrets.WP_URL }}
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          DEFAULT_CATEGORY_ID: ${{ secrets.DEFAULT_CATEGORY_ID }}
+          POST_STATUS: publish
+          SERTAKAN_FOTO: 'true'
+          MINIMAL_LEBAR_GAMBAR: '1200'
+          MODE_ATRIBUSI_SUMBER: 'teks'
+          SISIPKAN_FOTO_DI_ARTIKEL: 'false'
+          MAKS_BERITA_PER_PROSES: '1'
+          SERTAKAN_RINGKASAN: 'false'
+          SERTAKAN_TAG_OTOMATIS: 'true'
+          AMBIL_ARTIKEL_LENGKAP: 'true'
+
+      - name: Simpan riwayat posting
+        run: |
+          git config user.name "auto-post-bot"
+          git config user.email "auto-post-bot@users.noreply.github.com"
+          git add posted-log.json
+          git diff --staged --quiet || git commit -m "Update posted-log.json"
+          git push

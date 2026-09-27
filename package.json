@@ -1,10 +1,10 @@
 {
-  "name": "auto-post-news",
+  "name": "auto-post-jnews-luna",
   "version": "1.0.0",
   "description": "Auto-posting berita ke WordPress (JNews) menggunakan OpenAI GPT-5.6 Luna",
-  "main": "auto-post-news.js",
+  "main": "auto-post-luna.js",
   "scripts": {
-    "start": "node auto-post-news.js"
+    "start": "node auto-post-luna.js"
   },
   "dependencies": {
     "axios": "^1.20.0",

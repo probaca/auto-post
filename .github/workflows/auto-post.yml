@@ -35,7 +35,7 @@ jobs:
           DEFAULT_CATEGORY_ID: ${{ secrets.DEFAULT_CATEGORY_ID }}
           POST_STATUS: publish
           SERTAKAN_FOTO: 'true'
-          MINIMAL_LEBAR_GAMBAR: '1200'
+          MINIMAL_LEBAR_GAMBAR: '800'
           MODE_ATRIBUSI_SUMBER: 'teks'
           SISIPKAN_FOTO_DI_ARTIKEL: 'false'
           MAKS_BERITA_PER_PROSES: '1'

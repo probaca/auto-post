@@ -1,4 +1,4 @@
-name: Auto Post News
+name: Auto Post Berita
 
 on:
   schedule:
@@ -20,13 +20,13 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'         # mempercepat proses & menghemat kuota menit
-                                # (butuh package-lock.json ikut ada di repo)
+                                # (butuh package-lock.json ikut ada di repo — lihat Bagian C.3 panduan)
 
       - name: Install dependencies
         run: npm install
 
       - name: Jalankan skrip auto-post
-        run: node auto-post-news.js
+        run: node auto-post-luna.js
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           WP_URL: ${{ secrets.WP_URL }}

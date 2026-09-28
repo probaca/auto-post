@@ -49,8 +49,8 @@ const AMBIL_ARTIKEL_LENGKAP = (process.env.AMBIL_ARTIKEL_LENGKAP || 'true') === 
 // skrip mencoba beberapa selector umum lalu fallback ke gabungan semua <p>.
 const RSS_SOURCES = [
   { name: 'Setkab RI', url: 'https://setkab.go.id/feed/', selector: '.entry-content' },
-  { name: 'Antaranews Rilis Pers', url: 'https://www.antaranews.com/rss/rilis-pers.xml', selector: '.post-content' },
-  { name: 'Detikcom', url: 'https://news.detik.com/berita/rss', selector: '.post-content' },
+  { name: 'Antaranews Rilis Pers', url: 'https://www.antaranews.com/rss/rilis-pers.xml', selector: '.entry-content' },
+  { name: 'Detikcom', url: 'https://news.detik.com/berita/rss', selector: '.entry-content' },
 ];
 
 const LOG_FILE = './posted-log.json'; // penyimpanan sederhana anti-duplikat

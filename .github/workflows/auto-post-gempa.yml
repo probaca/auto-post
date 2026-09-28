@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}       # supaya bisa dijalankan manual dari tab Actions
 
 permissions:
-  contents: write             # supaya bisa commit balik posted-gempa-log.json
+  contents: write             # supaya bisa commit balik gempa-log.json
 
 jobs:
   run:
@@ -43,6 +43,6 @@ jobs:
         run: |
           git config user.name "auto-post-bot"
           git config user.email "auto-post-bot@users.noreply.github.com"
-          git add posted-gempa-log.json
-          git diff --staged --quiet || git commit -m "Update posted-gempa-log.json"
+          git add gempa-log.json
+          git diff --staged --quiet || git commit -m "Update gempa-log.json"
           git push

@@ -2,7 +2,7 @@ name: Auto Post Berita
 
 on:
   schedule:
-    - cron: '0 */2 * * *'   # tiap 2 jam sekali run
+    - cron: '17 */2 * * *'   # tiap dua jam di menit tujuh belas sekali run
   workflow_dispatch: {}       # supaya bisa dijalankan manual dari tab Actions
 
 permissions:

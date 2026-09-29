@@ -214,7 +214,7 @@ async function unggahFotoDenganKredit(urlGambar, sourceName) {
       maxBodyLength: Infinity,
     });
     const mediaId = unggah.data.id;
-    const teksKredit = `Foto: ${sourceName}`;
+    const teksKredit = `Sumber ${sourceName}`;
     await axios.post(
       `${WP_URL}/wp-json/wp/v2/media/${mediaId}`,
       { caption: teksKredit, alt_text: teksKredit, description: teksKredit },

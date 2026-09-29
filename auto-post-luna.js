@@ -39,8 +39,8 @@ const SISIPKAN_FOTO_DI_ARTIKEL = (process.env.SISIPKAN_FOTO_DI_ARTIKEL || 'false
 const MAKS_BERITA_PER_PROSES = parseInt(process.env.MAKS_BERITA_PER_PROSES || '2', 10); // batas jumlah berita yang diproses dalam satu kali jalan
 const SERTAKAN_RINGKASAN = (process.env.SERTAKAN_RINGKASAN || 'true') === 'true'; // tampilkan kotak ringkasan/highlight di awal artikel
 const SERTAKAN_TAG_OTOMATIS = (process.env.SERTAKAN_TAG_OTOMATIS || 'true') === 'true'; // isi 4 tag WordPress secara otomatis
-const MODE_ATRIBUSI_SUMBER = process.env.MODE_ATRIBUSI_SUMBER || 'link'; // 'link' (nama sumber jadi hyperlink), 'teks' (nama sumber tanpa link), 'tidak' (tidak ditampilkan sama sekali)
-const AMBIL_ARTIKEL_LENGKAP = (process.env.AMBIL_ARTIKEL_LENGKAP || 'true') === 'true'; // ambil teks lengkap halaman sumber (bukan cuma cuplikan RSS) supaya kutipan tidak hilang
+const MODE_ATRIBUSI_ = process.env.MODE_ATRIBUSI_ || 'link'; // 'link' (nama  jadi hyperlink), 'teks' (nama  tanpa link), 'tidak' (tidak ditampilkan sama sekali)
+const AMBIL_ARTIKEL_LENGKAP = (process.env.AMBIL_ARTIKEL_LENGKAP || 'true') === 'true'; // ambil teks lengkap halaman  (bukan cuma cuplikan RSS) supaya kutipan tidak hilang
 
 // Daftar sumber RSS. GANTI dengan sumber RESMI sesuai rubrik Anda.
 // Field "selector" OPSIONAL: CSS selector kontainer isi artikel di halaman
@@ -131,7 +131,7 @@ function ekstrakUrlGambar(item) {
 
 /**
  * FALLBACK kalau ekstrakUrlGambar() di atas tidak menemukan apa-apa —
- * terjadi kalau feed RSS sumbernya sama sekali tidak menyertakan gambar.
+ * terjadi kalau feed RSS nya sama sekali tidak menyertakan gambar.
  * Solusinya: buka halaman artikel ASLI dan baca tag
  * <meta property="og:image">, yang hampir selalu ada di situs modern
  * (dipakai untuk pratinjau saat dibagikan ke media sosial).
@@ -432,7 +432,7 @@ async function postingKeWordPress({ judul, isi, sourceLink, sourceName, foto, ri
 
   kontenLengkap += isi;
   if (MODE_ATRIBUSI_SUMBER === 'link') {
-    kontenLengkap += `\n<p><em>Sumber: <a href="${sourceLink}" target="_blank" rel="noopener nofollow">${sourceName}</a></em></p>`;
+    kontenLengkap += `\n<p><em>Disadur dari sumber <a href="${sourceLink}" target="_blank" rel="noopener nofollow">${sourceName}</a></em></p>`;
   } else if (MODE_ATRIBUSI_SUMBER === 'teks') {
     kontenLengkap += `\n<p><em>Sumber: ${sourceName}</em></p>`;
   }

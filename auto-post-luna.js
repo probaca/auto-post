@@ -39,7 +39,7 @@ const SISIPKAN_FOTO_DI_ARTIKEL = (process.env.SISIPKAN_FOTO_DI_ARTIKEL || 'false
 const MAKS_BERITA_PER_PROSES = parseInt(process.env.MAKS_BERITA_PER_PROSES || '2', 10); // batas jumlah berita yang diproses dalam satu kali jalan
 const SERTAKAN_RINGKASAN = (process.env.SERTAKAN_RINGKASAN || 'true') === 'true'; // tampilkan kotak ringkasan/highlight di awal artikel
 const SERTAKAN_TAG_OTOMATIS = (process.env.SERTAKAN_TAG_OTOMATIS || 'true') === 'true'; // isi 4 tag WordPress secara otomatis
-const MODE_ATRIBUSI_ = process.env.MODE_ATRIBUSI_ || 'link'; // 'link' (nama  jadi hyperlink), 'teks' (nama  tanpa link), 'tidak' (tidak ditampilkan sama sekali)
+const MODE_ATRIBUSI_SUMBER = process.env.MODE_ATRIBUSI_SUMBER || 'link'; // 'link' (nama  jadi hyperlink), 'teks' (nama  tanpa link), 'tidak' (tidak ditampilkan sama sekali)
 const AMBIL_ARTIKEL_LENGKAP = (process.env.AMBIL_ARTIKEL_LENGKAP || 'true') === 'true'; // ambil teks lengkap halaman  (bukan cuma cuplikan RSS) supaya kutipan tidak hilang
 
 // Daftar sumber RSS. GANTI dengan sumber RESMI sesuai rubrik Anda.

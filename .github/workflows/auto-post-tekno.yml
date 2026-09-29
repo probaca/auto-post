@@ -36,7 +36,7 @@ jobs:
           MAKS_TEKNO_PER_PROSES: '1'
           AMBIL_ARTIKEL_LENGKAP: 'true'
           SERTAKAN_FOTO: 'true'
-          SISIPKAN_FOTO_DI_ARTIKEL: 'true'
+          SISIPKAN_FOTO_DI_ARTIKEL: 'false'
           SERTAKAN_RINGKASAN: 'false'
           MODE_ATRIBUSI_SUMBER: 'teks'
           SERTAKAN_TAG_OTOMATIS: 'true'

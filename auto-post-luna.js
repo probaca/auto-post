@@ -372,7 +372,7 @@ ISI: <isi berita dalam HTML sederhana, gunakan tag <p> per paragraf, panjangnya 
     materiSumber = item.content || item.contentSnippet || '(tidak ada ringkasan tersedia)';
   }
 
-  const userPrompt = `Sumber: ${item.sourceName}
+  const userPrompt = `Disadur dari sumber ${item.sourceName}
 Judul asli: ${item.title}
 Materi sumber:
 ${materiSumber}
@@ -432,9 +432,9 @@ async function postingKeWordPress({ judul, isi, sourceLink, sourceName, foto, ri
 
   kontenLengkap += isi;
   if (MODE_ATRIBUSI_SUMBER === 'link') {
-    kontenLengkap += `\n<p><em>Disadur dari laporan <a href="${sourceLink}" target="_blank" rel="noopener nofollow">${sourceName}</a></em></p>`;
+    kontenLengkap += `\n<p><em>Sumber: <a href="${sourceLink}" target="_blank" rel="noopener nofollow">${sourceName}</a></em></p>`;
   } else if (MODE_ATRIBUSI_SUMBER === 'teks') {
-    kontenLengkap += `\n<p><em>Disadur dari laporan ${sourceName}</em></p>`;
+    kontenLengkap += `\n<p><em>Sumber: ${sourceName}</em></p>`;
   }
   // kalau MODE_ATRIBUSI_SUMBER === 'tidak', tidak ada apa pun yang ditambahkan
 

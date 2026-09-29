@@ -37,7 +37,7 @@ jobs:
           AMBIL_ARTIKEL_LENGKAP: 'true'
           SERTAKAN_FOTO: 'true'
           MINIMAL_LEBAR_GAMBAR: '800'
-          MODE_ATRIBUSI_SUMBER: 'teks'
+          MODE_ATRIBUSI_SUMBER: 'link'
           SISIPKAN_FOTO_DI_ARTIKEL: 'false'
           SERTAKAN_RINGKASAN: 'false'
           SERTAKAN_TAG_OTOMATIS: 'true'

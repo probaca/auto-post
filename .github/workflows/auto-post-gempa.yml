@@ -2,7 +2,7 @@ name: Auto Post Gempa BMKG
 
 on:
   schedule:
-    - cron: '*/20 * * * *'   # tiap 20 menit
+    - cron: '*/23 * * * *'   # tiap 23 menit
   workflow_dispatch: {}       # supaya bisa dijalankan manual dari tab Actions
 
 permissions:

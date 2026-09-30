@@ -1,4 +1,4 @@
-name: Auto Post Oto
+name: Auto Oto
 
 on:
   schedule:

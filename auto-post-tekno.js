@@ -36,8 +36,11 @@ const SERTAKAN_TAG_OTOMATIS = (process.env.SERTAKAN_TAG_OTOMATIS || 'true') === 
 // sumber. Kalau dikosongkan, skrip mencoba selector umum lalu fallback ke
 // gabungan semua <p>. Cara menemukannya sama seperti panduan Bagian 5A.4.
 const RSS_SOURCES = [
-  { name: 'GSMArena', url: 'https://www.gsmarena.com/rss-news-reviews.php3', selector: '.entry-content' },
   { name: 'Theverge', url: 'https://www.theverge.com/rss/tech/index.xml', selector: '.entry-content' },
+  { name: 'MacRumors', url: 'https://feeds.macrumors.com/MacRumors-All', selector: '.entry-content' },
+  { name: 'AppleInsider', url: 'https://appleinsider.com/rss/news/', selector: '.entry-content' },
+  { name: 'GSMArena', url: 'https://www.gsmarena.com/rss-news-reviews.php3', selector: '.entry-content' },
+
 ];
 
 const LOG_FILE = './posted-tekno-log.json'; // dedup terpisah dari modul lain

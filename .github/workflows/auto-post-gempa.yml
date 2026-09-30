@@ -1,4 +1,4 @@
-name: Auto Post Gempa BMKG
+name: Auto Gempa
 
 on:
   schedule:

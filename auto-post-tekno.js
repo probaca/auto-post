@@ -38,8 +38,6 @@ const SERTAKAN_TAG_OTOMATIS = (process.env.SERTAKAN_TAG_OTOMATIS || 'true') === 
 const RSS_SOURCES = [
   { name: 'GSMArena', url: 'https://www.gsmarena.com/rss-news-reviews.php3', selector: '.entry-content' },
   { name: 'Theverge', url: 'https://www.theverge.com/rss/tech/index.xml', selector: '.entry-content' },
-  { name: 'Motor1', url: 'https://www.motor1.com/rss/news/all/', selector: '.entry-content' },
-  { name: 'CarandDriver', url: 'https://www.caranddriver.com/rss/all.xml/', selector: '.entry-content' },
 ];
 
 const LOG_FILE = './posted-tekno-log.json'; // dedup terpisah dari modul lain

@@ -1,4 +1,4 @@
-name: Auto Post Sains Populer
+name: Auto Sains
 
 on:
   schedule:

@@ -285,7 +285,7 @@ Aturan ketat yang WAJIB dipatuhi:
 Keluarkan jawaban PERSIS dalam format berikut, tanpa teks tambahan lain:
 JUDUL: <judul berita, maksimal 12 kata, ringkas dan SEO-friendly>
 RINGKASAN: <SATU kalimat penggoda/hook (bukan ringkasan formal), akan tampil sebagai teaser di awal artikel, satu baris tanpa enter>
-TAG: <PERSIS 4 kata kunci/frasa pendek dipisah koma, mewakili topik utama. Jika artikel berkaitan dengan gawai tambahkan tag "gawai", dan jika artikel berkaitan dengan otomotif tambahkan tag "otomotif">
+TAG: <PERSIS 4 kata kunci/frasa pendek dipisah koma, mewakili topik utama. Jika artikel berkaitan dengan gawai tambahkan tag "gawai">
 ISI: <isi berita dalam HTML sederhana, gunakan tag <p> per paragraf, panjangnya MENYESUAIKAN panjang materi sumber. Jangan dipangkas drastis kalau sumbernya memang panjang dan detail>`;
 
   let materiSumber = null;

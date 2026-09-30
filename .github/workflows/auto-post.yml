@@ -1,4 +1,4 @@
-name: Auto Post Berita
+name: Auto News
 
 on:
   schedule:

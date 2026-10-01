@@ -194,7 +194,6 @@ ISI: <isi berita dalam HTML sederhana, tag <p> per paragraf, sekitar 150-300 kat
     `Kedalaman: ${gempa.Kedalaman || '-'}`,
     `Lokasi/Wilayah: ${gempa.Wilayah || '-'}`,
     `Koordinat: ${gempa.Coordinates || '-'}`,
-    `Potensi: ${gempa.Potensi || '-'}`,
     `Dirasakan: ${gempa.Dirasakan || '-'}`,
   ];
   if (gempa.Potensi) baris.push(`Perlu diperhatikan ${gempa.Potensi}`);

@@ -42,7 +42,7 @@ const MAKS_GEMPA_PER_PROSES = parseInt(process.env.MAKS_GEMPA_PER_PROSES || '2',
 const SERTAKAN_SHAKEMAP = (process.env.SERTAKAN_SHAKEMAP || 'true') === 'true'; // pasang peta guncangan BMKG sebagai featured image
 const SERTAKAN_RINGKASAN = (process.env.SERTAKAN_RINGKASAN || 'true') === 'true';
 const SERTAKAN_TAG_OTOMATIS = (process.env.SERTAKAN_TAG_OTOMATIS || 'true') === 'true';
-const URL_GEMPA_TERKINI = 'https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.xml'; // info gempa terbaru, resmi BMKG
+const URL_GEMPA_TERKINI = 'https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.xml'; // info gempa terbaru, resmi BMKG
 const LOG_FILE = './gempa-log.json'; // dedup terpisah dari posted-log.json milik auto-post-luna.js
 // -----------------------------------
 

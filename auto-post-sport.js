@@ -33,6 +33,7 @@ const MODE_ATRIBUSI_SUMBER = process.env.MODE_ATRIBUSI_SUMBER || 'link'; // 'lin
 // sumber. Kalau dikosongkan, skrip mencoba selector umum lalu fallback ke
 // gabungan semua <p>. Cara menemukannya sama seperti panduan Bagian 5A.4.
 const RSS_SOURCES = [
+  { name: 'Transfermarkt', url: 'https://www.transfermarkt.co.id/rss/news', selector: '.entry-content' },
   { name: 'AScom', url: 'https://as.com/rss/futbol/portada.xml', selector: '.entry-content' },
   { name: 'Football Italia', url: 'https://football-italia.net/feed/', selector: '.entry-content' },
   { name: 'Antaranews', url: 'https://www.antaranews.com/rss/sepakbola-liga-indonesia.xml', selector: '.entry-content' },

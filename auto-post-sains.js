@@ -276,7 +276,7 @@ Gaya penulisan yang WAJIB dipatuhi:
    artikel menggunakan huruf miring (italic).
 
 Keluarkan jawaban PERSIS dalam format berikut, tanpa teks tambahan lain:
-JUDUL: <judul yang memancing rasa penasaran, gaya menarik tapi TIDAK clickbait/menyesatkan, maksimal 12 kata>
+JUDUL: <judul lebih memancing rasa penasaran (curiosity gap) tanpa clickbait murahan/menyesatkan, gaya menarik, maksimal 12 kata>
 RINGKASAN: <SATU kalimat penggoda/hook (bukan ringkasan formal), akan tampil sebagai teaser di awal artikel, satu baris tanpa enter>
 TAG: <PERSIS 4 kata kunci/frasa pendek dipisah koma, mewakili topik utama>, tambahkan tag "sains"
 ISI: <isi artikel dalam HTML sederhana, gunakan tag <p> per paragraf, panjangnya MENYESUAIKAN panjang materi sumber. Jangan dipangkas drastis kalau sumbernya memang panjang dan detail>`;
